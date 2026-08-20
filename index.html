@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hia Lhom | TikTok Ads Dashboard</title>
+<title>Design & Delight Dashboard</title>
 
 <!-- Libraries -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
@@ -158,10 +158,10 @@
 
 <div class="header">
   <div class="logo-area">
-    <img src="https://scontent.fbkk22-8.fna.fbcdn.net/v/t39.30808-6/605113471_122108048559150355_6122134216378049132_n.jpg?stp=dst-jpg_tt6&cstp=mx1319x1311&ctp=s1319x1311&_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=UYuNSYijjoMQ7kNvwHTPZhQ&_nc_oc=AdrDRz0o6CO0QtN7dqggVBbuuU-hT4ukO7MStWs41cYqHCntY6fxTq0jjQWE4nhTnyc&_nc_zt=23&_nc_ht=scontent.fbkk22-8.fna&_nc_gid=QK091ZPWmgcwgCa8PwjlQg&_nc_ss=7b2a8&oh=00_Af_Vu2xHPOJQTbIF6Flc3NUvpf7bjk9-iBneEZxvkN9t5A&oe=6A3E88A2" alt="Hia Lhom">
+    <img src="https://scontent.fbkk22-8.fna.fbcdn.net/v/t39.30808-6/605113471_122108048559150355_6122134216378049132_n.jpg?stp=dst-jpg_tt6&cstp=mx1319x1311&ctp=s1319x1311&_nc_cat=110&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=UYuNSYijjoMQ7kNvwHTPZhQ&_nc_oc=AdrDRz0o6CO0QtN7dqggVBbuuU-hT4ukO7MStWs41cYqHCntY6fxTq0jjQWE4nhTnyc&_nc_zt=23&_nc_ht=scontent.fbkk22-8.fna&_nc_gid=QK091ZPWmgcwgCa8PwjlQg&_nc_ss=7b2a8&oh=00_Af_Vu2xHPOJQTbIF6Flc3NUvpf7bjk9-iBneEZxvkN9t5A&oe=6A3E88A2" alt="Design & Delight">
     <div class="logo-text">
-      <div class="logo-title">เฮียหลอม (Hia Lhom)</div>
-      <div class="logo-sub">TikTok Campaign Dashboard</div>
+      <div class="logo-title">Design & Delight</div>
+      <div class="logo-sub">Dashboard</div>
     </div>
   </div>
   <div class="header-right">
@@ -254,9 +254,9 @@
 <script>
 function parseBranch(campaign) {
   const parts = campaign.split(/\||-/).map(p => p.trim());
-  let b = parts.find(p => p.includes('สาขา') || p.includes('Hia Lhom'));
+  let b = parts.find(p => p.includes('สาขา') || p.includes('Hia Lhom') || p.includes('Design & Delight'));
   if (b) {
-    if (b.includes('Hia Lhom')) return 'Hia Lhom (รวม)';
+    if (b.includes('Hia Lhom') || b.includes('Design & Delight')) return 'Design & Delight (รวม)';
     return b;
   }
   return campaign;
@@ -272,7 +272,7 @@ function getMockData(month) {
   return [
     { 'Ad name': 'สาขาปิ่นเกล้า_Ad1', 'Campaign name': 'Promo | สาขาปิ่นเกล้า | Video view', 'Spend': 1250.50, 'Reach': 45000, 'Impressions': 52000, 'Video views': 18000, 'Paid likes': 450, 'Paid comments': 25, 'Paid shares': 40, 'Paid follows': 80 },
     { 'Ad name': 'สาขาบางนา_Promo_2', 'Campaign name': 'Promo | สาขาบางนา | Follower', 'Spend': 2100.00, 'Reach': 60000, 'Impressions': 71000, 'Video views': 15000, 'Paid likes': 600, 'Paid comments': 45, 'Paid shares': 65, 'Paid follows': 320 },
-    { 'Ad name': 'Ad_Brand_1', 'Campaign name': 'Brand | Hia Lhom | Video view', 'Cost': 4500.00, 'Reach': 150000, 'Impressions': 180000, 'Video views': 85000, 'Paid likes': 2100, 'Paid comments': 120, 'Paid shares': 300, 'Paid follows': 450 },
+    { 'Ad name': 'Ad_Brand_1', 'Campaign name': 'Brand | Design & Delight | Video view', 'Cost': 4500.00, 'Reach': 150000, 'Impressions': 180000, 'Video views': 85000, 'Paid likes': 2100, 'Paid comments': 120, 'Paid shares': 300, 'Paid follows': 450 },
     { 'Ad name': "KOLs-OLE' CH -ตามหาทองนพคุณ", 'Campaign name': 'Review | สาขารังสิต | Video view', 'Cost': 850.75, 'Reach': 25000, 'Impressions': 28000, 'Video views': 12000, 'Paid likes': 250, 'Paid comments': 10, 'Paid shares': 15, 'Paid follows': 45 }
   ];
 }
